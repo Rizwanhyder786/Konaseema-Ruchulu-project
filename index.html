@@ -15,40 +15,72 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-    body {font-family: 'Cinzel', serif; scroll-behavior: smooth;}
+    body {
+      font-family: 'Cinzel', serif;
+     scroll-behavior: smooth;}
 
     /* Navbar */
-    .navbar {background: rgba(0,0,0,0.7) !important; transition: 0.4s;}
-    .navbar.scrolled {background: black !important;}
+    .navbar {
+      background: rgba(0,0,0,0.7) !important;
+       transition: 0.4s;
+      }
+    .navbar.scrolled {
+      background: black !important;
+    }
 
     /* Hero Section */
     .hero {
       background:url("Konaseema.jpg") no-repeat center/cover;
       height: 100vh; 
-      display: flex; align-items: center; justify-content: center;
-      color: white; text-align: center;
+      display: flex; 
+      align-items: center;
+       justify-content: center;
+      color: white; 
+      text-align: center;
       position: relative;
     }
     .hero::after {
-      content: ""; position: absolute; top:0; left:0; width:100%; height:100%;
+      content: "";
+       position: absolute;
+        top:0; 
+        left:0; 
+        width:100%; 
+        height:100%;
       background: rgba(0,0,0,0.6);
     }
-    .hero-content {position: relative; z-index: 2;}
-    .hero-content h1 {font-size: 4rem; font-family: "Edu NSW ACT Cursive", cursive;}
+    .hero-content {
+      position: relative;
+       z-index: 2;}
+    .hero-content h1 {
+      font-size: 4rem; 
+      font-family: "Edu NSW ACT Cursive", cursive;
+    }
     .hero-content button {margin-top:20px;}
 
     /* About Section */
     .about-box {
-      background: white; padding:20px; border-radius:12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition:0.3s;
+      background: white;
+       padding:20px;
+        border-radius:12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+      transition:0.3s;
     }
-    .about-box:hover {transform: scale(1.05); background:#fff5e6;}
+    .about-box:hover {
+      transform: scale(1.05); 
+      background:#fff5e6;
+    }
 
     /* Menu */
     .child-menu {
       transition: transform 0.4s ease, background 0.4s ease;
     }
-    .child-menu:hover {transform: translateY(-10px); background:#ffefd5;}
+    .child-menu:hover {
+      transform: translateY(-10px);
+       background:#ffefd5;
+      }
+      .child-menu>img{
+        height: 50vh;
+      }
 
     /* Gallery */
     .slider {
@@ -109,13 +141,87 @@
        border:none;}
 
     /* Footer */
-    footer {background:black; color:white; padding:20px;
+    footer {
+      background:black; 
+      color:white; 
+      padding:20px;
     align-content: center;
     }
-    @media screen {
+    /* 🌐 Default (Laptop/Desktop ≥1025px) */
+/* Your existing styles already serve desktops well. */
+
+/* 📱 Small Devices (Phones ≤600px) */
+@media (max-width: 600px) {
+  .hero {
+    height: 80vh;
+    background-position: center;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-content button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  .about-box img,
+  .child-menu img,
+  .team-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .slides > img {
+    width: 180px;
+    height: 12rem;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+/* 📟 Medium Devices (Tablets 601px – 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero {
+    height: 90vh;
+    background-position: center;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .about-box img,
+  .child-menu img,
+  .team-card img {
+    height: 230px;
+    object-fit: cover;
+  }
+  .slides > img {
+    width: 220px;
+    height: 14rem;
+  }
+}
+
+/* 💻 Large Devices (Laptops & Desktops ≥1025px) */
+@media (min-width: 1025px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+  .slides > img {
+    width: 250px;
+    height: 17rem;
+  }
+}
+
+
       
-      
-    }
+    
   
   </style>
 </head>
@@ -278,7 +384,7 @@ Here to guide your tasting and share great stories—cheers!. </p>
     </form>
     <div class="mt-4">
       <h5>Find Us</h5>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="350" style="border:0;" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30449.884486920157!2d78.37104598299413!3d17.448435990715346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9158f201b205%3A0x11bbe7be7792411b!2sMadhapur%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1755767911569!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
